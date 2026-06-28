@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "configVersion": 1,
+  "product": "crm",
+  "client": {
+    "id": "ideal",
+    "slug": "iqtgk3iycyckvlu4",
+    "name": "Ideal biomedical Pro",
+    "shortName": "Ideal Pro",
+    "description": "Gestion commerciale pour equipements biomedicaux",
+    "slogan": "Prestation de service et vente d'equipements biomedicaux et electroniques divers: \n installation et service apres vente, conseils",
+    "tagline": "L'electronique au coeur de la sante"
+  },
+  "company": {
+    "legalName": "IDEAL BIOMEDICAL Sarl",
+    "phone": "(237) 698 27 90 00/ 679 69 91 48",
+    "email": "idealbiomedical@gmail.com",
+    "address": "766 Douala-Cameroun",
+    "city": "Douala",
+    "siege": "Douala-Cameroun",
+    "rccm": "RC/DLA/2021/B/5256",
+    "niu": "M102116582589S",
+    "capitalSocial": "1 000 000 FCFA",
+    "bankAccount": "14011000396",
+    "bankAgency": "UBA Agence de l'université"
+  },
+  "invoicing": {
+    "currency": "XAF",
+    "currencySymbol": "FCFA",
+    "taxRate": 0,
+    "invoiceTitle": "FACTURE DE FOURNITURE DES CONSOMMABLES DE LABORATOIRE",
+    "receiptFooter": "Merci pour votre confiance !"
+  },
+  "tenant": {
+    "prefix": "ideal_",
+    "localDbName": "ideal_pro_db"
+  },
+  "branding": {
+    "brand": "#1B4D8E"
+  },
+  "locale": {
+    "default": "fr",
+    "available": [
+      "fr",
+      "en"
+    ]
+  },
+  "state": {
+    "enabled": true,
+    "message": ""
+  }
+}
