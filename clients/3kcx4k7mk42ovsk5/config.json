@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "configVersion": 1,
+  "configVersion": 2,
   "product": "crm",
   "client": {
     "id": "ideal",
-    "slug": "iqtgk3iycyckvlu4",
+    "slug": "3kcx4k7mk42ovsk5",
     "name": "Ideal biomedical Pro",
     "shortName": "Ideal Pro",
     "description": "Gestion commerciale pour equipements biomedicaux",
