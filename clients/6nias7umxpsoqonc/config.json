@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "configVersion": 1,
+  "product": "crm",
+  "client": {
+    "id": "sawa",
+    "slug": "6nias7umxpsoqonc",
+    "name": "Sawa Distribution",
+    "shortName": "Sawa",
+    "description": "Gestion commerciale et distribution",
+    "slogan": "Votre partenaire distribution au Cameroun",
+    "tagline": "Qualité, proximité, fiabilité"
+  },
+  "company": {
+    "legalName": "SAWA DISTRIBUTION SARL",
+    "phone": "+237 233 42 18 50 / +237 699 14 27 63",
+    "email": "contact@sawa-distribution.cm",
+    "address": "Rue Joss, Akwa — Douala",
+    "city": "Douala",
+    "siege": "Douala, Cameroun",
+    "rccm": "RC/DLA/2023/B/4187",
+    "niu": "M092314567841P",
+    "capitalSocial": "5 000 000 FCFA",
+    "bankAccount": "10005 00012 09876543210 17",
+    "bankAgency": "Afriland First Bank — Agence Akwa"
+  },
+  "invoicing": {
+    "currency": "XAF",
+    "currencySymbol": "FCFA",
+    "taxRate": 19.25,
+    "invoiceTitle": "FACTURE",
+    "receiptFooter": "Merci de votre confiance — Sawa Distribution"
+  },
+  "tenant": {
+    "prefix": "sawa_",
+    "localDbName": "sawa_db"
+  },
+  "branding": {
+    "brand": "#0F766E",
+    "logo": null,
+    "icon": null
+  },
+  "locale": {
+    "default": "fr",
+    "available": [
+      "fr",
+      "en"
+    ]
+  },
+  "state": {
+    "enabled": true,
+    "message": ""
+  }
+}
