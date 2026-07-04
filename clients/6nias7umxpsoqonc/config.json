@@ -27,7 +27,7 @@
   "invoicing": {
     "currency": "XAF",
     "currencySymbol": "FCFA",
-    "taxRate": 19.25,
+    "taxRate": 18.25,
     "invoiceTitle": "FACTURE",
     "receiptFooter": "Merci de votre confiance — Sawa Distribution"
   },
@@ -49,6 +49,7 @@
   },
   "state": {
     "enabled": true,
-    "message": ""
+    "trialEndsAt": "2026-07-04",
+    "message": "Appelez le 6XX XX XX XX"
   }
 }
