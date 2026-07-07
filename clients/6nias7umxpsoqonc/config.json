@@ -1,12 +1,13 @@
 
+
 {
   "schema": 1,
   "configVersion": 3,
   "product": "crm",
   "client": {
-    "id": "sawa",
+    "id": "ideal",
     "slug": "6nias7umxpsoqonc",
-    "name": "Sawa Distribution",
+    "name": "Ideal biomedical",
     "shortName": "Ideal",
     "description": "L'electronique au coeur de la sante",
     "slogan": "Prestation de service et vente d'equipements biomedicaux et electroniques divers: \n installation et service apres vente, conseils",
