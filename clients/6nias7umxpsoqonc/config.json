@@ -31,7 +31,7 @@
     "invoiceTitle": "FACTURE",
     "receiptFooter": "Merci de votre confiance — Sawa Distribution"
   },
-  "tenant": {
+   "tenant": {
     "prefix": "sawa_",
     "localDbName": "sawa_db"
   },
@@ -49,6 +49,7 @@
     ]
   },
   "state": {
-    "enabled": true
+    "enabled": true,
+    "message": ""
   }
 }
