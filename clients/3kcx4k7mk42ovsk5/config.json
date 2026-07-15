@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "configVersion": 2,
+  "configVersion": 1,
   "product": "crm",
   "client": {
     "id": "ideal",
@@ -50,5 +50,9 @@
   "state": {
     "enabled": true,
     "message": ""
+  },
+  "auth": {
+    "recoveryCodeHash": "8e2c23e0965e8321718d5592696330f47ce6362acbb0d30069a763f476504723",
+    "recoveryCodeVersion": 1
   }
 }
