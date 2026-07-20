@@ -1,0 +1,122 @@
+<style>
+  .doc { font-family: Arial, sans-serif; font-size: 12px; color: #1a1a1a; padding: 28px; box-sizing: border-box; }
+  .doc .head { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #1a1a1a; padding-bottom: 12px; margin-bottom: 16px; }
+  .doc .head-left h1 { font-size: 18px; margin: 0 0 2px 0; }
+  .doc .head-left .slogan { font-style: italic; color: #555; margin: 0 0 6px 0; }
+  .doc .head-left p { margin: 1px 0; color: #333; }
+  .doc .head-right { text-align: right; }
+  .doc .head-right h2 { font-size: 20px; margin: 0 0 4px 0; letter-spacing: 1px; }
+  .doc .head-right p { margin: 1px 0; color: #333; }
+  .doc .muted { color: #555; }
+  .doc .legal { color: #777; font-size: 10px; margin-top: 4px; }
+  .doc .parties { display: flex; justify-content: space-between; margin: 16px 0; }
+  .doc .party { width: 48%; }
+  .doc .party h3 { font-size: 10px; text-transform: uppercase; color: #777; margin: 0 0 4px 0; letter-spacing: 0.5px; }
+  .doc .party p { margin: 1px 0; }
+  .doc .party .name { font-weight: bold; font-size: 13px; }
+  .doc table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .doc th { text-align: left; font-size: 10px; text-transform: uppercase; color: #555; padding: 6px 4px; border-bottom: 2px solid #1a1a1a; }
+  .doc td { padding: 6px 4px; border-bottom: 1px solid #eee; }
+  .doc .right { text-align: right; }
+  .doc .center { text-align: center; }
+  .doc .totals { width: 260px; margin-left: auto; margin-top: 12px; }
+  .doc .totals .row { display: flex; justify-content: space-between; padding: 3px 0; }
+  .doc .totals .total { font-weight: bold; font-size: 15px; border-top: 2px solid #1a1a1a; margin-top: 4px; padding-top: 6px; }
+  .doc .totals .paidrow { color: #333; }
+  .doc .words { font-style: italic; color: #555; margin-top: 10px; padding-top: 8px; border-top: 1px dashed #ccc; }
+  .doc footer { margin-top: 28px; padding-top: 10px; border-top: 1px solid #ccc; color: #555; font-size: 10px; }
+  .doc footer .bank { margin-bottom: 4px; }
+  .doc .signature { margin-top: 24px; text-align: right; color: #333; }
+</style>
+<div class="doc">
+  <div class="head">
+    <div class="head-left">
+      {{#if company.logo_url}}<img src="{{company.logo_url}}" style="height:48px; margin-bottom:6px;">{{/if}}
+      <h1>{{company.name}}</h1>
+      {{#if company.slogan}}<p class="slogan">{{company.slogan}}</p>{{/if}}
+      <p>{{company.address}}{{#if company.city}}, {{company.city}}{{/if}}</p>
+      <p>{{company.phone}}{{#if company.email}} · {{company.email}}{{/if}}</p>
+      <p class="legal">
+        {{#if company.rccm}}RCCM {{company.rccm}}{{/if}}
+        {{#if company.niu}} · NIU {{company.niu}}{{/if}}
+      </p>
+    </div>
+    <div class="head-right">
+      <h2>{{invoice.title}}</h2>
+      <p>N° {{invoice.number}}</p>
+      <p>{{sale.date_formatted}}</p>
+    </div>
+  </div>
+
+  <div class="parties">
+    <div class="party">
+      <h3>Client</h3>
+      <p class="name">{{client.name}}</p>
+      {{#if client.company_name}}<p>{{client.company_name}}</p>{{/if}}
+      {{#if client.address}}<p>{{client.address}}{{#if client.city}}, {{client.city}}{{/if}}</p>{{/if}}
+      {{#if client.phone}}<p>{{client.phone}}</p>{{/if}}
+      {{#if client.nui}}<p>NIU {{client.nui}}</p>{{/if}}
+    </div>
+    <div class="party" style="text-align:right;">
+      <h3>Référence</h3>
+      <p>Vente {{sale.reference}}</p>
+      {{#if responsable}}<p>Vendeur : {{responsable}}</p>{{/if}}
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Référence</th>
+        <th>Désignation</th>
+        <th class="right">Qté</th>
+        <th class="right">PU</th>
+        <th class="right">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each items}}
+      <tr>
+        <td>{{this.code}}</td>
+        <td>{{this.name}}</td>
+        <td class="right">{{this.quantity}}</td>
+        <td class="right">{{this.unit_price_formatted}}</td>
+        <td class="right">{{this.total_formatted}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <div class="totals">
+    <div class="row"><span>Sous-total</span><span>{{sale.subtotal_formatted}}</span></div>
+    {{#if sale.has_discount}}
+    <div class="row"><span>Remise</span><span>-{{sale.discount_formatted}}</span></div>
+    {{/if}}
+    {{#each sale.sale_tax_lines}}
+    <div class="row"><span>{{this.name}} ({{this.rate}}%)</span><span>{{this.amount_formatted}}</span></div>
+    {{/each}}
+    <div class="row total"><span>Total</span><span>{{sale.total_formatted}}</span></div>
+    {{#each sale.invoice_tax_lines}}
+    <div class="row"><span>{{this.name}} ({{this.rate}}%)</span><span>{{this.amount_formatted}}</span></div>
+    {{/each}}
+    {{#if sale.net_formatted}}
+    <div class="row total"><span>Net à payer</span><span>{{sale.net_formatted}}</span></div>
+    {{/if}}
+    <div class="row paidrow"><span>Payé</span><span>{{sale.total_paid_formatted}}</span></div>
+    <div class="row paidrow"><span>Reste à payer</span><span>{{sale.remaining_formatted}}</span></div>
+  </div>
+
+  <p class="words">Arrêté la présente facture à la somme de : {{sale.amount_in_words}}</p>
+
+  <div class="signature">
+    <p>{{company.name}}</p>
+  </div>
+
+  <footer>
+    {{#if company.bankAccount}}
+    <p class="bank">Compte bancaire : {{company.bankAccount}}{{#if company.bankAgency}} — {{company.bankAgency}}{{/if}}</p>
+    {{/if}}
+    {{#if company.capitalSocial}}<p>Capital social : {{company.capitalSocial}}</p>{{/if}}
+    <p>{{company.receipt_footer}}</p>
+  </footer>
+</div>

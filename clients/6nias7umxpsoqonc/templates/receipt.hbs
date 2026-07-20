@@ -1,0 +1,84 @@
+<style>
+  /* Ticket 80 mm : rendu avec { widthMm: 80, auto: true } — hauteur suit le contenu. */
+  .doc { font-family: Arial, sans-serif; font-size: 13px; color: #000; padding: 8px 10px; width: 100%; box-sizing: border-box; }
+  .doc .center { text-align: center; }
+  .doc h1 { font-size: 15px; margin: 4px 0 0 0; }
+  .doc .slogan { font-style: italic; font-size: 10px; color: #333; margin: 2px 0; }
+  .doc .muted { color: #333; font-size: 11px; margin: 1px 0; }
+  .doc hr { border: none; border-top: 1px dashed #000; margin: 8px 0; }
+  .doc table { width: 100%; border-collapse: collapse; }
+  .doc td { padding: 2px 0; font-size: 12px; vertical-align: top; }
+  .doc .right { text-align: right; }
+  .doc .total { font-weight: bold; font-size: 14px; }
+  .doc .label { text-transform: uppercase; font-size: 10px; color: #333; }
+  .doc .items td { font-size: 11px; padding: 1px 0; }
+  .doc .items .name { max-width: 44mm; }
+  .doc footer { margin-top: 10px; text-align: center; font-size: 11px; color: #333; }
+  .doc footer .thanks { font-weight: bold; margin-bottom: 2px; }
+</style>
+<div class="doc">
+  <div class="center">
+    {{#if company.logo_url}}<img src="{{company.logo_url}}" style="height:36px">{{/if}}
+    <h1>{{company.name}}</h1>
+    {{#if company.slogan}}<p class="slogan">{{company.slogan}}</p>{{/if}}
+    <p class="muted">{{company.address}}{{#if company.city}}, {{company.city}}{{/if}}</p>
+    <p class="muted">{{company.phone}}</p>
+  </div>
+
+  <hr>
+
+  <p class="muted">Reçu N° {{payment.reference}}</p>
+  <p class="muted">{{payment.date_formatted}}</p>
+  <p class="muted">Vente {{sale.reference}}</p>
+  <p class="muted">Client : {{client.name}}</p>
+  {{#if responsable}}<p class="muted">Vendeur : {{responsable}}</p>{{/if}}
+
+  <hr>
+
+  <table class="items">
+    {{#each items}}
+    <tr>
+      <td class="name">{{this.name}} x{{this.quantity}}</td>
+      <td class="right">{{this.total_formatted}}</td>
+    </tr>
+    {{/each}}
+  </table>
+
+  <hr>
+
+  <table>
+    <tr>
+      <td class="label">Total vente</td>
+      <td class="right total">{{sale.total_formatted}}</td>
+    </tr>
+    <tr>
+      <td class="label">Payé ce jour</td>
+      <td class="right total">{{payment.amount_formatted}}</td>
+    </tr>
+    <tr>
+      <td>Mode de paiement</td>
+      <td class="right">{{payment.method}}</td>
+    </tr>
+    {{#if payment.transaction_ref}}
+    <tr>
+      <td>Réf. transaction</td>
+      <td class="right">{{payment.transaction_ref}}</td>
+    </tr>
+    {{/if}}
+    <tr>
+      <td class="label">Total payé à ce jour</td>
+      <td class="right">{{sale.total_paid_formatted}}</td>
+    </tr>
+    <tr>
+      <td class="label">Reste à payer</td>
+      <td class="right total">{{sale.remaining_formatted}}</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <footer>
+    <p class="thanks">{{company.receipt_footer}}</p>
+    {{#if company.rccm}}<p>RCCM {{company.rccm}}</p>{{/if}}
+  </footer>
+</div>
