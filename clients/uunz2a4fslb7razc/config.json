@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "configVersion": 1,
+  "product": "crm",
+  "client": {
+    "id": "demo",
+    "slug": "uunz2a4fslb7razc",
+    "name": "Démo Fedora",
+    "shortName": "Démo ERP",
+    "description": "Client de démonstration Fedora ERP (fictif)",
+    "slogan": "",
+    "tagline": "Accroche démo ERP"
+  },
+  "company": {
+    "legalName": "Démo Fedora SARL",
+    "phone": "+237 600 00 00 01",
+    "email": "contact-erp@demo-fedora.test",
+    "address": "1 rue de la Démo",
+    "city": "Démoville",
+    "siege": "Immeuble Démo, Démoville",
+    "rccm": "DEMO-RCCM-0001",
+    "niu": "DEMO-NIU-0001",
+    "capitalSocial": "1 000 000 XAF",
+    "bankAccount": "DEMO-BANQUE-0001",
+    "bankAgency": "Agence Démo Centre"
+  },
+  "invoicing": {
+    "currency": "XAF",
+    "currencySymbol": "FCFA",
+    "invoiceTitle": "FACTURE DÉMO",
+    "receiptFooter": "Mentions démo : marchandises non reprises."
+  },
+  "tenant": {
+    "prefix": "demo_",
+    "localDbName": "demo_db"
+  },
+  "branding": {
+    "brand": "#7c3aed",
+    "logo": null,
+    "icon": null,
+    "cover": null
+  },
+  "locale": {
+    "default": "fr",
+    "available": [
+      "fr"
+    ]
+  },
+  "state": {
+    "enabled": true,
+    "message": ""
+  },
+  "settings": {
+    "sessionMaxAgeHours": 24,
+    "idleLockMinutes": 0,
+    "pinRequired": false
+  },
+  "plan": {
+    "modules": [
+      "CORE"
+    ]
+  },
+  "auth": {
+    "recoveryCodeHash": "55980f6cef43914b647518efd472601975328a0ba475454424e49b57ac18813f",
+    "recoveryCodeVersion": 2
+  },
+  "supabase": {
+    "enc": "t91bQqns/Ig5JcCjY7737AYbHAAkDbjZ3MOg2if9T81h/GKWQ7rHP1XvmynilaYnqYaqqpyGwLvBa6ClE4DbyKG8YDe6mIhwY7ISsrDqvbnTvo70mHeYzO4pFT4sFRo151SOKir96yPcbY6vKhkKXwpsAxQSE0pN/3KxtOzWzklM2omE+HFs/9AByCFArXtvvAugobBC5gCsjSJi0eHXr/FnCGpJ9SMCVO9kq2CubpPROqBWJ1ny/yctpHLn6NJgq7ylESCH798vHJJ7KVkn5fXNEB/LUdtcBOZImSbIY6C4aelJffpRNlMMCSej0Zqbsh20J87Etoq6Lqev2pAnO8HWrrk92Tvct/5NybPIvpJ84lW86Nq9nAl04vqtvvM7txwCH7rxONA0QXEawYKBI5YE+GxKm3QXi0jVfhAhtQo+P6a3GNLOmW2gU+rKAViU7+RnXR3f1V9e+4acq4tU0nDHiX3PtRo6Vt9pTqlvzaftG+bFdS5eGdvtXdGYj9yR6FvN0VH9LH3w8YTBkRq6uP7vjtWdO0/rvccVbezNAoiK/kyqahfZ0fAmv8g="
+  },
+  "license": {
+    "enc": "It4mXxx/l40GipR04i9QEUBRQUXW1J+Y3dwlgMK77tSppDxtRkZMoMcuz+ZmPLXKzcSFbtC9aTdoP2j2CgWK6InH9z418ARFtg4RaNpyHENLNP6pthS7qv9WiEU2rnnhGl1emS4O",
+    "key_version": 1
+  },
+  "license_plans": [],
+  "subscription_support": {}
+}
