@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "configVersion": 5,
+  "configVersion": 6,
   "product": "crm",
   "client": {
     "id": "demo",
     "slug": "uunz2a4fslb7razc",
-    "name": "Démo Fedora",
+    "name": "Démo Fedora ERP",
     "shortName": "Démo ERP Modifiée",
     "description": "Client de démonstration Fedora ERP (fictif)",
     "slogan": "",
@@ -50,36 +50,54 @@
     "enabled": true,
     "message": ""
   },
-  "settings": {
-    "sessionMaxAgeHours": 24,
-    "idleLockMinutes": 0,
-    "pinRequired": false
+  "plan": {},
+  "subscription": {
+    "startsAt": "2026-10-09",
+    "expiresAt": "2027-04-30",
+    "months": null,
+    "reminderDays": 30,
+    "subscription_id": "SUB-000001",
+    "product_id": "crm",
+    "tenant_id": "demo",
+    "plan_id": "SUR_MESURE",
+    "plan_token_id": 3,
+    "kind": "renewal",
+    "entitlement_version": 1,
+    "valid_until": "2027-04-30",
+    "status": "ACTIVE",
+    "grace_period_days": 0,
+    "on_expiry": "EXPIRED_READ_ONLY",
+    "license_key_version": 1
   },
-  "plan": {
-    "modules": [
-      "CORE",
-      "CRM",
-      "SALES",
-      "PURCHASING",
-      "INVENTORY",
-      "ACCOUNTING",
-      "SERVICE",
-      "MAINTENANCE",
-      "IMPORT",
-      "INTEGRATIONS"
-    ]
+  "license": {
+    "enc": "WOMOTxZvXLnvzSHJG4dj27a7aposGfNb+KJ1QkxnJRTCaMrJGoNLDyazsRc4NSUKxEWfr8bfF4LNAyUM8wF2y06FIq9q8qd2gvGIFWLN+MEYfGTGwHCFc82kdG0V1D7Zs/ufiTtS",
+    "key_version": 1
+  },
+  "supabase": {
+    "enc": "b0OE0mbdlvT3IPmPCrauLpvUP1u78Iw7bF+mBVeGx+3TbHanoDgwXQkzZrBnk2PmM9CppDvCOP62I17tqUfx8XjLw8zXuv1VdZ9K1QOFAW+36Thi/ZEoV64DBhzoSYs4QLVrxbv6SgN7HbHJdLTZa2WFAgMTKGgbqzPhgIQ1WJ2IQplRkWza9ofRomDS7Nt6WaBCTvCWFe9mMwLES81zm1ETvmslFb67w7V6gfM017e3bmPoTrsLpx12lS3HrWDwMyIMU+28jCAMrlhmyHqq0a+YZIuChn/YIAlv5ErajiNMAlOidQRhNcwy6vhAs+FWJBmV+zwjK8Zv0h8tkQv2Y6kkiHd2b30DdplFl8UKEvQ9h/YbBV0m4LPQ+mD05i3Qp7/jhmshbPB4dpXpsIamdGoqt07UHX6jBztyr5qVadwFyPu7ij05CMJ9mu+cVRit/ENm9vNypZ5VJi8nsDDPnGvQzF3Reuu9/EaU1zPS2plUa8dwg2vEjKV0bI87TEawsfrV7CliRI+0B1veyIZyJBkS/HEA4U8ClXtB7f0BRiMo0mbteMzJheEoBM4="
   },
   "auth": {
     "recoveryCodeHash": "55980f6cef43914b647518efd472601975328a0ba475454424e49b57ac18813f",
     "recoveryCodeVersion": 2
   },
-  "supabase": {
-    "enc": "b0OE0mbdlvT3IPmPCrauLpvUP1u78Iw7bF+mBVeGx+3TbHanoDgwXQkzZrBnk2PmM9CppDvCOP62I17tqUfx8XjLw8zXuv1VdZ9K1QOFAW+36Thi/ZEoV64DBhzoSYs4QLVrxbv6SgN7HbHJdLTZa2WFAgMTKGgbqzPhgIQ1WJ2IQplRkWza9ofRomDS7Nt6WaBCTvCWFe9mMwLES81zm1ETvmslFb67w7V6gfM017e3bmPoTrsLpx12lS3HrWDwMyIMU+28jCAMrlhmyHqq0a+YZIuChn/YIAlv5ErajiNMAlOidQRhNcwy6vhAs+FWJBmV+zwjK8Zv0h8tkQv2Y6kkiHd2b30DdplFl8UKEvQ9h/YbBV0m4LPQ+mD05i3Qp7/jhmshbPB4dpXpsIamdGoqt07UHX6jBztyr5qVadwFyPu7ij05CMJ9mu+cVRit/ENm9vNypZ5VJi8nsDDPnGvQzF3Reuu9/EaU1zPS2plUa8dwg2vEjKV0bI87TEawsfrV7CliRI+0B1veyIZyJBkS/HEA4U8ClXtB7f0BRiMo0mbteMzJheEoBM4="
-  },
-  "license": {
-    "enc": "g33wfsI1fXWvFGEpAuG2bhxB1uZkzizg93Kc8NrYqBwKTD30zJ3sv/EpoTN2ftDlo8h8U7j7EdRAlubSbFAW1xXwpDcaiSutjSXO9nNVije66SF6etvSrBatYQaJTz48+wcoQA0q",
-    "key_version": 1
-  },
-  "license_plans": [],
-  "subscription_support": {}
+  "license_plans": [
+    {
+      "id": 2,
+      "code": "DEMO",
+      "label": "Forfait Démo",
+      "modules": [],
+      "capabilities": []
+    },
+    {
+      "id": 3,
+      "code": "SUR_MESURE",
+      "label": "Sur mesure"
+    }
+  ],
+  "subscription_support": {},
+  "settings": {
+    "sessionMaxAgeHours": 24,
+    "idleLockMinutes": 0,
+    "pinRequired": false
+  }
 }
