@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "configVersion": 7,
+  "configVersion": 8,
   "product": "crm",
   "client": {
     "id": "demo",
@@ -95,7 +95,7 @@
     "enc": "b0OE0mbdlvT3IPmPCrauLpvUP1u78Iw7bF+mBVeGx+3TbHanoDgwXQkzZrBnk2PmM9CppDvCOP62I17tqUfx8XjLw8zXuv1VdZ9K1QOFAW+36Thi/ZEoV64DBhzoSYs4QLVrxbv6SgN7HbHJdLTZa2WFAgMTKGgbqzPhgIQ1WJ2IQplRkWza9ofRomDS7Nt6WaBCTvCWFe9mMwLES81zm1ETvmslFb67w7V6gfM017e3bmPoTrsLpx12lS3HrWDwMyIMU+28jCAMrlhmyHqq0a+YZIuChn/YIAlv5ErajiNMAlOidQRhNcwy6vhAs+FWJBmV+zwjK8Zv0h8tkQv2Y6kkiHd2b30DdplFl8UKEvQ9h/YbBV0m4LPQ+mD05i3Qp7/jhmshbPB4dpXpsIamdGoqt07UHX6jBztyr5qVadwFyPu7ij05CMJ9mu+cVRit/ENm9vNypZ5VJi8nsDDPnGvQzF3Reuu9/EaU1zPS2plUa8dwg2vEjKV0bI87TEawsfrV7CliRI+0B1veyIZyJBkS/HEA4U8ClXtB7f0BRiMo0mbteMzJheEoBM4="
   },
   "license": {
-    "enc": "C6IBNp4ULCSNO4fIPCr8np0dLibILl4c6bL9aYIowWqmOLO/K0QMsKLHsUn8TkWQrfE/3L8oLys7wM9pTQheLZeFlYnzCfTTQCM/g7NUG/d+0NsrDlCc0kp+Gf2dnzA7VPYbE1h7",
+    "enc": "KJ5Az2HC7sF/18P3T7rx/jWuH3dDetiPfl3unSPeMTaDZD/9AYA7Dqd8yS5zoLM97nrogtHIp5bR2A7cMmGeXsORLMWIOoEIa42KasgC6vbR1g5UfRIsPcDp2iV7X/lY4NQV7FLs",
     "key_version": 1
   },
   "license_plans": [
@@ -103,13 +103,36 @@
       "id": 2,
       "code": "DEMO",
       "label": "Forfait Démo",
-      "modules": [],
+      "modules": [
+        "CORE",
+        "CRM",
+        "SALES",
+        "PURCHASING",
+        "INVENTORY",
+        "ACCOUNTING",
+        "SERVICE",
+        "MAINTENANCE",
+        "IMPORT",
+        "INTEGRATIONS"
+      ],
       "capabilities": []
     },
     {
       "id": 3,
       "code": "SUR_MESURE",
-      "label": "Sur mesure"
+      "label": "Sur mesure",
+      "modules": [
+        "CORE",
+        "CRM",
+        "SALES",
+        "PURCHASING",
+        "INVENTORY",
+        "ACCOUNTING",
+        "SERVICE",
+        "MAINTENANCE",
+        "IMPORT",
+        "INTEGRATIONS"
+      ]
     }
   ],
   "subscription_support": {}
